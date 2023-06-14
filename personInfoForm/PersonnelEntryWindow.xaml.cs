@@ -20,11 +20,11 @@ namespace personInfoForm
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class PersonnelEntryWindow : Window
     {
         BindingList<PersonModel> people = new BindingList<PersonModel>();
 
-        public MainWindow()
+        public PersonnelEntryWindow()
         {
             InitializeComponent();
 
@@ -41,6 +41,11 @@ namespace personInfoForm
             };
 
             people.Add(person);
+        }
+
+        private void fullNameListBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            //Work on connecting selected item to Personnel Addresses Form
         }
     }
 }

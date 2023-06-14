@@ -1,11 +1,11 @@
-﻿<Window x:Class="personInfoForm.MainWindow"
+﻿<Window x:Class="personInfoForm.PersonnelEntryWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:personInfoForm"
         mc:Ignorable="d" FontSize="22"
-        Title="MainWindow" Height="314" Width="731">
+        Title="Personel Information" Height="314" Width="731">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="*" />
@@ -32,10 +32,10 @@
             <Button x:Name="saveNameButton" Padding="15 3" Click="saveNameButton_Click">Save</Button>
         </StackPanel>
 
-        <ListBox x:Name="fullNameListBox" Grid.Row="3" Grid.Column="1" MinHeight="100" MaxWidth="350" Margin="0 50">
+        <ListBox x:Name="fullNameListBox" Grid.Row="3" Grid.Column="1" MinHeight="100" MaxWidth="350" Margin="0 50" SelectionChanged="fullNameListBox_SelectionChanged">
             <ListBox.ItemTemplate>
                 <DataTemplate>
-                    <TextBlock Text="{Binding}" />
+                    <TextBlock Text="{Binding FullName}" />
                 </DataTemplate>
             </ListBox.ItemTemplate>
         </ListBox>

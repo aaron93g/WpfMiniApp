@@ -1,0 +1,49 @@
+﻿<Window x:Class="personInfoForm.AddressEntryWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:personInfoForm"
+        mc:Ignorable="d" FontSize="20"
+        Title="Address Entry" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        
+        <StackPanel Orientation="Horizontal" Grid.Column="1" Grid.Row="1">
+            <Label x:Name="firstNameLabel"  >First Name:</Label>
+            <TextBox x:Name="firstNameTextBox" MinWidth="125" Margin="5 0 35 0"/>
+
+            <Label x:Name="lastNameLabel"  >Last Name:</Label>
+            <TextBox x:Name="lastNameTextBox" MinWidth="125" Margin="5 0 35 0"/>
+        </StackPanel>
+
+
+        <StackPanel Orientation="Horizontal" Grid.Column="1" Grid.Row="2" VerticalAlignment="Center">
+            <ListBox x:Name="addressListBox"  MinHeight="100" MinWidth="300" MaxWidth="350" Margin="20">
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <TextBlock Text="{Binding FullAddress}"/>
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+            </ListBox>
+
+            <StackPanel Orientation="Vertical" VerticalAlignment="Center">
+                <Button Margin="0 0 0 10">Select Address</Button>
+                <Button  Margin="0 10 0 0" >Save new address</Button>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</Window>

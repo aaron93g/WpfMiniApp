@@ -5,7 +5,7 @@ VisualStudioVersion = 17.6.33717.318
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "personInfoForm", "personInfoForm\personInfoForm.csproj", "{7B487CAE-4177-4138-82B2-F4EA59795F7E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfAppLibrary", "WpfAppLibrary\WpfAppLibrary.csproj", "{FE41AB94-DED7-4B00-92FE-B8192DB49866}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WpfAppLibrary", "WpfAppLibrary\WpfAppLibrary.csproj", "{FE41AB94-DED7-4B00-92FE-B8192DB49866}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
