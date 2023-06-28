@@ -38,6 +38,9 @@ namespace personInfoForm
             {
                 FirstName = firstNameTextBox.Text,
                 LastName = lastNameTextBox.Text,
+                PersonnelAddress = new List<AddressModel> { new AddressModel { Street = "Blank", City = " blank ", State = "blank ", ZipCode = "blank " , Email = "blank "} },
+
+                
             };
 
             people.Add(person);
@@ -45,7 +48,10 @@ namespace personInfoForm
 
         private void fullNameListBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            //Work on connecting selected item to Personnel Addresses Form
+            PersonModel person = (PersonModel)fullNameListBox.SelectedItem;
+            AddressInformationWindow addressInformationWindow = new AddressInformationWindow(person);
+
+            addressInformationWindow.Show();
         }
     }
 }
