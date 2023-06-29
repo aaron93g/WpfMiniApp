@@ -52,6 +52,7 @@ namespace personInfoForm
             AddressInformationWindow addressInformationWindow = new AddressInformationWindow(person);
 
             addressInformationWindow.Show();
+            
         }
     }
 }

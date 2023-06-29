@@ -50,6 +50,12 @@ namespace personInfoForm
         {
             // create new address model list, add it to personalAddress
             // maybe use selected inex? need to research it next
+
+            AddressModel newAddress = new AddressModel();
+            _input.PersonnelAddress.Add(newAddress);
+
+            AddressViewWindow addressViewWindow = new AddressViewWindow(newAddress);
+            addressViewWindow.Show();
         }
     }
 }
